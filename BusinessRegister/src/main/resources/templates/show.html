@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+	<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
+	<title>index</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+	<br><br><br>
+	<div class="p-3 mb-2 bg-light text-dark container">
+	
+	
+	
+			<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-info">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+					data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarExample01">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item active">
+							<a class="nav-link"  aria-current="page" href="index">HOME PAGE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"  href="/GOTOREGISTERPAGE">REGISTER RECORD</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/SHOW">SHOW RECORDS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar -->
+	
+	
+	
+	
+	
+	
+	
+	
+		<div class="center">
+			<br><br>
+		<!--	<caption>LIST OF BOOKS AND AUTHORS</caption>-->
+			<table class="table table-success table-striped table-hover">
+ 
+
+				<thead>
+					<tr>
+						<th>BUSINESS NAME</th>
+						<th>BUSINESS TYPE</th>
+						<th>BUSINESS TURNOVER</th>
+						<th>BUSINESS CONTACT</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="publish: ${list}">
+						<td th:text="${publish.businessName}" />
+						<td th:text="${publish.businessType}" />
+						<td th:text="${publish.businessTurnover}" />
+						<td th:text="${publish.businessContact}" />
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>
