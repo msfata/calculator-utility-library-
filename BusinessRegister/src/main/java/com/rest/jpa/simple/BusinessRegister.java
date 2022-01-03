@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmailProjectApplication {
+public class BusinessRegister {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmailProjectApplication.class, args);
+		SpringApplication.run(BusinessRegister.class, args);
 	}
 }
